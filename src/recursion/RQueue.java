@@ -50,7 +50,20 @@ public class RQueue<T> implements Recursion.CarlQueue<T> {
 
     @Override
     public void display() {
-
+        System.out.println(toString());
+    }
+    public String toString() {
+        String str = "";
+        if(front != null) {
+            str += front.toString();
+        }
+        if(inside != null) {
+            str += inside.toString();
+        }
+        if(rear != null) {
+            str += rear.toString();
+        }
+        return str;
     }
 
     // This method is useful for us in testing your code. Do not modify it.
