@@ -1,8 +1,8 @@
 package recursion;
 
-public class RQueue<T> implements Recursion.CarlQueue<T> {
+public class RQueueBAD<T> implements Recursion.CarlQueue<T> {
     private T front;
-    private RQueue<T> inside;
+    private RQueueBAD<T> inside;
     private T rear;
 
     @Override
@@ -16,7 +16,7 @@ public class RQueue<T> implements Recursion.CarlQueue<T> {
             return;
         }
         if (inside == null) {
-            inside = new RQueue<>();
+            inside = new RQueueBAD<>();
         }
         inside.enqueue(item);
     }
