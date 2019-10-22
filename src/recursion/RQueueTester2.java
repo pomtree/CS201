@@ -2,7 +2,7 @@ package recursion;
 
 public class RQueueTester2 {
     public static void main(String[] args) {
-        RQueue2<String> rq = new RQueue2<String>();
+        RQueue<String> rq = new RQueue<String>();
         rq.enqueue("1");
         rq.enqueue("2");
         rq.enqueue("3");
