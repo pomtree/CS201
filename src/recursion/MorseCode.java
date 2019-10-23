@@ -4,11 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MorseCode {
-    public static void main(String[] args) {
-        String str = ".--..-....-.-...-.-.......---.....-.......-...-..-.-...-..-.....-----.-...-..........-.-....-.---.-.-.--.--.-.....-..-.--.-.....--......-..--...--....-....-.-..--..----.....-.-..-.-----.-------..";
-        // -> With tenure suzied have all the more leisure for yachting but her publications are no good
-        decode(str);
-    }
 
     private static final Map<Character, String> MORSE_CODE = createMorseCodeMap();
 

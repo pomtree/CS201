@@ -2,7 +2,7 @@ package recursion;
 
 public class RQueue<T> implements Recursion.CarlQueue<T> {
     private T front;
-     RQueue<T> inside;
+    RQueue<T> inside;
     private T rear;
 
     @Override
@@ -30,20 +30,18 @@ public class RQueue<T> implements Recursion.CarlQueue<T> {
 
     @Override
     public T dequeue() {
-        if(rear == null) {
-            T temp = front;
+        T temp = front;
+        if (rear == null) {
             front = null;
             return temp;
         }
-        if(inside == null) {
-            T temp = front;
+        if (inside == null) {
             front = rear;
             rear = null;
             return temp;
         }
-        T temp = front;
         front = inside.dequeue();
-        if(inside.front == null)
+        if (inside.front == null)
             inside = null;
         return temp;
     }
@@ -52,15 +50,16 @@ public class RQueue<T> implements Recursion.CarlQueue<T> {
     public void display() {
         System.out.println(toString());
     }
+
     public String toString() {
         String str = "";
-        if(front != null) {
+        if (front != null) {
             str += front.toString();
         }
-        if(inside != null) {
+        if (inside != null) {
             str += inside.toString();
         }
-        if(rear != null) {
+        if (rear != null) {
             str += rear.toString();
         }
         return str;
