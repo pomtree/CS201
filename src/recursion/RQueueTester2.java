@@ -9,6 +9,7 @@ public class RQueueTester2 {
         rq.enqueue("4");
         rq.enqueue("5");
         rq.showImmediateContents();
+        rq.display();
         rq.inside.showImmediateContents();
         rq.inside.inside.showImmediateContents();
 

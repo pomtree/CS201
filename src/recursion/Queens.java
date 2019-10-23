@@ -3,7 +3,7 @@ package recursion;
 public class Queens {
     // Example of recursion for puzzle solving: find a chess board with as
 // many queens as rows/columns where none threatens another.
-    public static final int SIZE = 5;
+    public static final int SIZE = 8;
 
     // Blank out a chessboard. Use a hyphen to indicate no piece
     public static void initBoard(char[][] board) {
