@@ -112,7 +112,7 @@ public class ReservationSystem {
         }
         // Otherwise return the nextAvailable time starting at r's end time
         // Modify this to call getNextAvailableNonOverlapping recursively
-        return 0;
+        return getNextAvailableTime(r.endTime());
     }
 
     public boolean addReservation(Reservation r) {

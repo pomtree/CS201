@@ -30,10 +30,28 @@ public class ReservationBinarySearchTree {
         // If the return value is not null, return it
         // Otherwise there were no predecessors in the right tree
         // so the current node must be the predecessor, so return that
-
-
+        if (key == t) {
+            return data;
+        }
+        if (key > t) {
+            if (left == null) {
+                return null;
+            }
+            return left.findPredecessor(t);
+        }
+        if (key < t) {
+            if (right == null) {
+                return data;
+            } else {
+                Reservation r = right.findPredecessor(t);
+                if (r != null) {
+                    return r;
+                } else {
+                    return data;
+                }
+            }
+        }
         return null;
-
     }
 
     public Reservation findSuccessor(double t) {
