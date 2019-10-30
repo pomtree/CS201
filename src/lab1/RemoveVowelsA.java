@@ -14,12 +14,24 @@ public class RemoveVowelsA {
      * @param s an array
      * @return
      */
-    public static void removeVowels(char[] s) {
+    public static char[] removeVowels(char[] s) {
+        int count = 0;
         for (int i = 0; i < s.length; i++) {
             if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') {
-                s[i] = ' ';
+                s[i] = 'a';
+                count++;
             }
         }
+        char[] newArr = new char[s.length - count];
+        int ni = 0;
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] != 'a') {
+                newArr[ni] = s[i];
+                ni++;
+            }
+        }
+        return newArr;
+
     }
 
 
@@ -38,7 +50,7 @@ public class RemoveVowelsA {
 
         char[] inputArray = stringToChar(input);
 
-        removeVowels(inputArray);
+        inputArray = removeVowels(inputArray);
 
         System.out.println(Arrays.toString(inputArray));
     }

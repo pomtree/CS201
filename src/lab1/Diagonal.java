@@ -64,7 +64,8 @@ public class Diagonal {
 
     public static void main(String[] args) throws IOException {
 
-        String filename = args[0];
+        //String filename = args[0];
+        String filename = "C:\\Users\\user\\Desktop\\matrix1.txt";
         int[][] matrix = readMatrixFromFilename(filename);
         int diff = diagonalDifference(matrix);
         System.out.println("The difference is: " + diff);

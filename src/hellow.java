@@ -1,5 +1,8 @@
+import java.util.HashMap;
+
 public class hellow {
     public static void main(String[] args) {
-        System.out.println("hello");
+        int x = (int) Math.pow(2,30);
+        
     }
 }
